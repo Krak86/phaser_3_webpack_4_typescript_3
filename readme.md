@@ -41,6 +41,5 @@ When changes are made the bundle will be recompiled. This modified bundle is ser
 
 ## Credits
 
-Phaser + ES6: https://github.com/lean/phaser-es6-webpack  
-Webpack 4 + Babel: https://github.com/cvgellhorn/webpack-boilerplate  
-Phaser 3 + ES6 + Webpack 3: https://github.com/nkholski/phaser3-es6-webpack  
+Phaser 3 demo game example: http://phaser.io/tutorials/making-your-first-phaser-3-game 
+Phaser 3 + Typescript + Webpack https://github.com/troyedwardsjr/phaser3-typescript-webpack 
