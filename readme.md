@@ -43,3 +43,7 @@ When changes are made the bundle will be recompiled. This modified bundle is ser
 
 Phaser 3 demo game example: http://phaser.io/tutorials/making-your-first-phaser-3-game \
 Phaser 3 + Typescript + Webpack https://github.com/troyedwardsjr/phaser3-typescript-webpack 
+
+## Play online
+
+https://krak86.github.io/phaser_3_webpack_4_typescript_3/
