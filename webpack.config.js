@@ -1,17 +1,8 @@
-//const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const webpack = require("webpack");
-
-//const dirNode = path.join(__dirname, "./node_modules");
-//const dirApp = path.join(__dirname, "./src");
-//const dirAssets = path.join(__dirname, "./assets");
-
-// Phaser webpack config
-//const phaserModule = path.join(__dirname, "/node_modules/phaser/");
-//const phaser = path.join(phaserModule, "src/phaser.js");
 
 module.exports = {
   entry: {
@@ -24,7 +15,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // TYPESCRIPT
       {
         test: /\.ts?$/,
         loader: "ts-loader",
@@ -33,17 +23,6 @@ module.exports = {
         },
         exclude: /node_modules/
       },
-      // IMAGES
-      /*{
-        test: /\.(jpe?g|png|gif)$/,
-        loader: "file-loader",
-        include: dirAssets,
-        exclude: dirNode,
-        options: {
-          name: "[path][name].[ext]"
-        }
-      },*/
-      // RAW
       {
         test: [/\.vert$/, /\.frag$/],
         use: "raw-loader"
@@ -63,7 +42,10 @@ module.exports = {
       } 
     ]),
     new webpack.HotModuleReplacementPlugin(),
-    //new BundleAnalyzerPlugin()
+    new WorkboxPlugin.GenerateSW({     
+      clientsClaim: true,
+      skipWaiting: true
+    })
   ],
   devServer: {
     contentBase: "./dist",
@@ -94,9 +76,5 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".js"]
-    /*,
-    alias: {
-      phaser: phaser
-    }*/
   }
 };
