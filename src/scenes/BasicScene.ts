@@ -21,7 +21,7 @@ class BasicScene extends Phaser.Scene {
     this.load.image("bomb", "assets/sprites/bomb.png");
     this.load.spritesheet("boy", "assets/sprites/boySprite.png", {
       frameWidth: 57,
-      frameHeight: 74
+      frameHeight: 68
     });
   }
 
@@ -38,7 +38,7 @@ class BasicScene extends Phaser.Scene {
     this.ground.create(50, 250, "ground");
     this.ground.create(750, 220, "ground");
 
-		this.player = this.physics.add.sprite(0, 0, "boy");
+		this.player = this.physics.add.sprite(100, 450, "boy");
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
 		this.player.setGravityY(300);
