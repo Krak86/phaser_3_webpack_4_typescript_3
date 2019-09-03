@@ -45,6 +45,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: "./docs",
+    compress: true,
     hot: true
   },
   optimization: {
