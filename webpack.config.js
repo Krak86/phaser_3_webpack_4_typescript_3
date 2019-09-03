@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: __dirname + "/dist",
+    path: __dirname + "/docs",
     publicPath: ""
   },
   module: {
@@ -26,7 +26,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(["docs"]),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html"
@@ -44,7 +44,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./docs",
     hot: true
   },
   optimization: {
