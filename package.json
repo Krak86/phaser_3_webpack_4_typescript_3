@@ -1,7 +1,7 @@
 {
   "name": "phaser_3_webpack_4_typescript_3",
   "version": "1.0.0",
-  "description": "Phaser3 Boilerplate with webpack 4 and TypeScript 3 on board",
+  "description": "Phaser3 Boilerplate with webpack 4, TypeScript 3, PWA on board",
   "keywords": [],
   "author": "Ruslan Korkin <rukrak86@gmail.com> (https://github.com/krak86)",
   "license": "MIT",

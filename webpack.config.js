@@ -22,10 +22,6 @@ module.exports = {
           transpileOnly: true
         },
         exclude: /node_modules/
-      },
-      {
-        test: [/\.vert$/, /\.frag$/],
-        use: "raw-loader"
       }
     ]
   },
