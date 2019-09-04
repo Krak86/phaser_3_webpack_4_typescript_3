@@ -4,13 +4,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const webpack = require("webpack");
 
+const dist = "docs";
+
 module.exports = {
   entry: {
-    main: ["./src/main.ts"]
+    main: ["./src/js/app.ts"]
   },
   output: {
     filename: "[name].[hash].js",
-    path: __dirname + "/docs",
+    path: __dirname + "/" + dist,
     publicPath: ""
   },
   module: {
@@ -26,15 +28,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["docs"]),
+    new CleanWebpackPlugin([dist]),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html"
     }),
     new CopyWebpackPlugin([
       {
-        from:'src/assets',
-        to:'assets'
+        from:'src/img',
+        to:'img'
       } 
     ]),
     new webpack.HotModuleReplacementPlugin(),
@@ -44,7 +46,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: "./docs",
+    contentBase: "./" + dist,
     compress: true,
     hot: true
   },

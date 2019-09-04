@@ -15,11 +15,11 @@ class BasicScene extends Phaser.Scene {
   }
 
   public preload(): void {
-    this.load.image("sky", "assets/sprites/sky.png");
-    this.load.image("ground", "assets/sprites/platform.png");
-    this.load.image("star", "assets/sprites/star.png");
-    this.load.image("bomb", "assets/sprites/bomb.png");
-    this.load.spritesheet("boy", "assets/sprites/boySprite.png", {
+    this.load.image("sky", "img/sprites/sky.png");
+    this.load.image("ground", "img/sprites/platform.png");
+    this.load.image("star", "img/sprites/star.png");
+    this.load.image("bomb", "img/sprites/bomb.png");
+    this.load.spritesheet("boy", "img/sprites/boySprite.png", {
       frameWidth: 57,
       frameHeight: 68
     });
