@@ -28,15 +28,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/sprites/star.png"
   },
   {
-    "revision": "3c959fdb571e7ca15dcce4330477496a",
+    "revision": "584fe348f0fcf9560e2e8b948d04f5fb",
     "url": "index.html"
   },
   {
-    "revision": "fe66078a4811b34b03ff",
-    "url": "main.bundle.js"
+    "url": "main.b606c3ec2032eca7040a.js"
   },
   {
-    "revision": "36d8b552881ff2fcf04e",
-    "url": "vendors~main.bundle.js"
+    "url": "vendors~main.b606c3ec2032eca7040a.js"
   }
 ]);

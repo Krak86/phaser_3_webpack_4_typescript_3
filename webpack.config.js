@@ -9,7 +9,7 @@ module.exports = {
     main: ["./src/main.ts"]
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[hash].js",
     path: __dirname + "/docs",
     publicPath: ""
   },
@@ -49,6 +49,7 @@ module.exports = {
     hot: true
   },
   optimization: {
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: "all",
       minSize: 30000,
