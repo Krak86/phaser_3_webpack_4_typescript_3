@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const dist = "dist";
+
 module.exports = {
     paths: {
         src: {
@@ -8,7 +10,7 @@ module.exports = {
             js: "./src/js/"
         },
         dist: {
-            base: "./web/dist/",
+            base: "./" + dist + "/",
             clean: [
                 '**/*',
             ]
@@ -19,7 +21,7 @@ module.exports = {
         live: "https://example.com/",
         local: "http://example.test/",
         critical: "http://example.test/",
-        publicPath: () => process.env.PUBLIC_PATH || "/dist/",
+        publicPath: () => process.env.PUBLIC_PATH || "/" + dist + "/",
     },
     vars: {
         cssName: "styles"
@@ -27,11 +29,11 @@ module.exports = {
     entries: {
         "app": "app.ts"
     },
-    babelLoaderConfig: {
+    /*babelLoaderConfig: {
         exclude: [
             /(node_modules|bower_components)/
         ],
-    },
+    },*/
     copyWebpackConfig: [
         {
             from: "./src/js/workbox-catch-handler.js",
@@ -39,7 +41,7 @@ module.exports = {
         }
     ],
     criticalCssConfig: {
-        base: "./web/dist/criticalcss/",
+        base: "./" + dist + "/criticalcss/",
         suffix: "_critical.min.css",
         criticalHeight: 1200,
         criticalWidth: 1200,
@@ -99,14 +101,14 @@ module.exports = {
         swDest: "../sw.js",
         precacheManifestFilename: "js/precache-manifest.[manifestHash].js",
         importScripts: [
-            "/dist/workbox-catch-handler.js"
+            "/" + dist + "/workbox-catch-handler.js"
         ],
         exclude: [
             /\.(png|jpe?g|gif|svg|webp)$/i,
             /\.map$/,
             /^manifest.*\\.js(?:on)?$/,
         ],
-        globDirectory: "./web/",
+        globDirectory: "./",
         globPatterns: [
             "offline.html",
             "offline.svg"

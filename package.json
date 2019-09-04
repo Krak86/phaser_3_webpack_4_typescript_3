@@ -24,19 +24,62 @@
     "type": "git",
     "url": "git+https://github.com/Krak86/phaser_3_webpack_4_typescript_3.git"
   },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR"
+    ],
+    "legacyBrowsers": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR"
+    ],
+    "modernBrowsers": [
+      "last 2 Chrome versions",
+      "not Chrome < 60",
+      "last 2 Safari versions",
+      "not Safari < 10.1",
+      "last 2 iOS versions",
+      "not iOS < 10.3",
+      "last 2 Firefox versions",
+      "not Firefox < 54",
+      "last 2 Edge versions",
+      "not Edge < 15"
+    ]
+  },
   "dependencies": {
     "phaser": "3.15.1"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "4.6.0",
+    "css-loader": "3.2.0",
     "dotenv": "^8.1.0",
+    "file-loader": "4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "ignore-loader": "0.1.2",
+    "imagemin-gifsicle": "6.0.1",
+    "imagemin-mozjpeg": "8.0.0",
+    "imagemin-optipng": "7.0.0",
+    "imagemin-svgo": "7.0.0",
+    "imagemin-webp-webpack-plugin": "3.2.1",
+    "img-loader": "3.0.1",
+    "mini-css-extract-plugin": "0.8.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "resolve-url-loader": "3.1.0",
+    "style-loader": "1.0.0",
+    "terser-webpack-plugin": "1.4.1",
     "ts-loader": "5.3.2",
     "typescript": "3.2.2",
     "webpack": "4.28.2",
+    "webpack-bundle-analyzer": "3.4.1",
     "webpack-cli": "3.1.2",
+    "webpack-dashboard": "3.1.0",
     "webpack-dev-server": "3.1.14",
+    "webpack-manifest-plugin": "2.0.4",
+    "webpack-merge": "4.2.2",
+    "webpack-notifier": "1.8.0",
     "workbox-webpack-plugin": "^4.3.1"
   },
   "scripts": {
