@@ -118,6 +118,10 @@ module.exports = {
       {
         from:'src/img',
         to:'img'
+      },
+      {
+        from:'src/manifest.json',
+        to:''
       }
     ]),
     new webpack.HotModuleReplacementPlugin(),
