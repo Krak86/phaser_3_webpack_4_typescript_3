@@ -101,7 +101,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Phaser game",
       filename: "index.html",
-      template: "./src/templates/index.html",
+      template: "./src/index.html",
       favicon: "./src/img/favicons/favicon.ico",
       meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
       minify: {
@@ -120,7 +120,7 @@ module.exports = {
         to:'img'
       },
       {
-        from:'src/manifest',
+        from:'src',
         to:''
       }
     ]),
