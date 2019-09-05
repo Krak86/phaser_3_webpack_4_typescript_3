@@ -198,11 +198,29 @@ module.exports = {
         }
       }
     },
+    minimize: true,
     minimizer: [
       new TerserPlugin({
+          test: /\.js(\?.*)?$/i,
           cache: true,
           parallel: true,
-          sourceMap: true
+          sourceMap: true,
+          extractComments: false,
+          terserOptions: {
+            ecma: undefined,
+            warnings: false,
+            parse: {},
+            compress: {},
+            mangle: true,
+            module: false,
+            output: null,
+            toplevel: false,
+            nameCache: null,
+            ie8: false,
+            keep_classnames: undefined,
+            keep_fnames: false,
+            safari10: false,
+          },
         }
       ),
       new OptimizeCSSAssetsPlugin({
