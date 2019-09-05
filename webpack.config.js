@@ -118,10 +118,6 @@ module.exports = {
       {
         from:'src/img',
         to:'img'
-      },
-      {
-        from:'src',
-        to:''
       }
     ]),
     new webpack.HotModuleReplacementPlugin(),
